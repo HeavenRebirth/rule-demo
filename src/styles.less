@@ -1,0 +1,52 @@
+.router-container {
+  width: 100%;
+  min-height: 100%;
+  padding: 10px;
+}
+
+.content {
+  // padding: 10px;
+  // border: 1px solid #eee;
+  position: relative;
+  height: 100%;
+
+  .ruleContent {
+    .header {
+      height: 65px;
+      border: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+
+      :global {
+        .ant-btn-group {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .header-title {
+        position: relative;
+        padding: 16px 24px;
+        color: rgba(0, 0, 0, 0.85);
+        // background: #fff;
+        border-left: 1px solid #f0f0f0;
+        // border-radius: 2px 2px 0 0;
+        width: 200px;
+
+        .title {
+          margin: 0;
+          color: rgba(0, 0, 0, 0.65);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 32px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .variable_drawer {
+    .drawer_header-button {
+    }
+  }
+}

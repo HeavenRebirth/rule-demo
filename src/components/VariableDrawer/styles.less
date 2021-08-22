@@ -1,0 +1,90 @@
+.table_form-edit {
+  margin-top: 20px;
+  border-radius: 0px;
+
+  :global {
+    // 添加table的border样式
+    .ant-table-body {
+      border: 1px solid #e8e8e8;
+    }
+
+    // 设置header默认背景色
+    .ant-table-header {
+      background: #eff3f6;
+      border: 1px solid #e8e8e8;
+      border-bottom: none;
+    }
+
+    // 设置默认footer为新增时样式
+    .ant-table-footer {
+      padding: 0px;
+      border-radius: 0px;
+      border-top: 0px;
+      background: transparent;
+      width: 100%;
+    }
+
+    // table外滚动条隐藏
+    .ant-table-scroll {
+      overflow: hidden;
+    }
+
+    // 默认暂无数据无任何展示
+    .ant-table-placeholder {
+      padding: 0px;
+      border-bottom: 0px;
+      border-top: 0px;
+      .ant-empty-normal {
+        margin: 0px;
+      }
+      .ant-empty-normal .ant-empty-image {
+        height: 0px;
+      }
+
+      .ant-empty-image {
+        margin-bottom: 0px;
+      }
+      .ant-empty-image svg {
+        display: none;
+      }
+
+      .ant-empty-description {
+        display: none;
+      }
+    }
+
+    .ant-table-row-cell-break-word {
+      .ant-form-item-control {
+        line-height: 28px;
+        height: 28px;
+        overflow: hidden;
+        .ant-select-selection,
+        .ant-select-selection__rendered,
+        .ant-input,
+        .ant-input-number,
+        .ant-input-number-input {
+          height: 28px;
+          line-height: 28px;
+        }
+      }
+      // .has-error .ant-input-number {
+      //   border-color: @error-color !important;
+      // }
+      .ant-table-thead > tr:first-child > th:first-child,
+      .ant-table-thead > tr:first-child > th:last-child {
+        border-radius: 0;
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .table_row-add {
+    border-radius: 0px;
+    height: 44px;
+    line-height: 44px;
+    color: #0f71e2;
+  }
+}

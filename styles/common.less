@@ -1,0 +1,530 @@
+.root-body-container {
+  height: 100%;
+  #root {
+    height: 100%;
+  }
+
+  // chrome滚动条样式
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    z-index: 99;
+    background: transparent;
+
+    &:hover {
+      width: 8px;
+    }
+
+    &-thumb {
+      // 滑块
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    &-track {
+      margin: 4px 0;
+      border-radius: 8px;
+      // background: transparent
+    }
+  }
+
+  .no-boxShadow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .primary-border {
+    border-color: #0f71e2;
+  }
+  .error-border {
+    border-color: #e01211;
+  }
+
+  .ant-form-item,
+  .ant-row,
+  .ant-layout {
+    // 输入框焦点 shadow取消
+    .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+      .no-boxShadow;
+      .primary-border;
+    }
+    .ant-input-number-focused {
+      .no-boxShadow;
+      .primary-border;
+    }
+    .ant-input-number-handler:hover {
+      .ant-input-number-handler-up-inner,
+      .ant-input-number-handler-down-inner {
+        color: #0f71e2;
+      }
+    }
+    .ant-input,
+    .ant-input-number {
+      &:focus,
+      &:not(:disabled):hover {
+        .no-boxShadow;
+        .primary-border;
+      }
+    }
+    .ant-time-picker-input:hover {
+      .no-boxShadow;
+      .primary-border;
+    }
+    .ant-calendar-picker:hover {
+      .ant-calendar-picker-input:not(.ant-input-disabled) {
+        .no-boxShadow;
+        .primary-border;
+      }
+    }
+    .ant-select {
+      .ant-select-focused .ant-select-selection,
+      .ant-select-selection:focus,
+      .ant-select-selection:hover,
+      .ant-select-selection:active {
+        .no-boxShadow;
+        .primary-border;
+      }
+    }
+    .ant-select-disabled {
+      .ant-select-focused .ant-select-selection,
+      .ant-select-selection:focus,
+      .ant-select-selection:hover,
+      .ant-select-selection:active {
+        .no-boxShadow;
+        border-color: #d9d9d9;
+      }
+    }
+    .ant-select-open .ant-select-selection,
+    .ant-select-focused .ant-select-selection {
+      .no-boxShadow;
+      .primary-border;
+    }
+    .ant-select-auto-complete.ant-select {
+      &:focus,
+      &:not(:disabled):hover {
+        .no-boxShadow;
+        .primary-border;
+      }
+    }
+    .has-error {
+      .ant-select-open,
+      .ant-select-focused {
+        .ant-select-selection {
+          .no-boxShadow;
+          .error-border;
+        }
+      }
+      .ant-input {
+        &:focus,
+        &:hover,
+        & {
+          .no-boxShadow;
+          .error-border;
+        }
+      }
+    }
+  }
+
+  // 按钮样式
+  .btn-text-primary {
+    color: #0f71e2;
+    &.ant-btn.disabled,
+    &.ant-btn.disabled.active,
+    &.ant-btn.disabled:active,
+    &.ant-btn.disabled:focus,
+    &.ant-btn.disabled:hover,
+    &.ant-btn[disabled],
+    &.ant-btn[disabled].active,
+    &.ant-btn[disabled]:active,
+    &.ant-btn[disabled]:focus,
+    &.ant-btn[disabled]:hover {
+      color: rgba(0, 0, 0, 0.25);
+    }
+    // &:hover,
+    // &:focus {
+    //   border-color: #0f71e2;
+    //   color: #0f71e2;
+    // }
+    // &-primary {
+    //   background-color: #0f71e2;
+    //   border-color: #0f71e2;
+    //   &:hover,
+    //   &:focus {
+    //     border-color: #0f71e2;
+    //     color: #fff;
+    //     background-color: #0f71e2;
+    //   }
+    // }
+    // &-danger {
+    //   &:hover {
+    //     background-color: #e01211;
+    //     border-color: #e01211;
+    //     color: #fff;
+    //   }
+    // }
+  }
+
+  .btn-runtime-blue,
+  .btn-runtime-blue:hover,
+  .btn-runtime-blue:focus {
+    background-color: rgba(75, 104, 250, 0.466666666666667);
+    border-color: rgba(75, 104, 250, 1);
+    color: #fff;
+    font-size: 16px;
+  }
+
+  // 弹窗样式居中显示
+  .vertical-center-modal,
+  .ant-modal-wrap {
+    text-align: center;
+    // white-space: nowrap;
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+    }
+    .ant-modal {
+      display: inline-block;
+      vertical-align: middle;
+      top: 0;
+      text-align: left;
+      &-content {
+        .ant-modal-close-x {
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+        }
+        .ant-modal-header {
+          background: #fff;
+          padding: 6px 16px;
+          .ant-modal-title {
+            font-size: 14px;
+          }
+        }
+        .ant-modal-body {
+          padding: 16px 28px 12px;
+          p {
+            min-height: 44px;
+            margin-bottom: 0;
+          }
+        }
+        .ant-modal-footer {
+          border-top: none;
+          // padding-bottom: @padding-sm*2;
+          padding-top: 0;
+          text-align: center;
+          button {
+            font-size: 14px;
+            width: 144px;
+            height: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  // 表格样式
+  .text-ellipsis {
+    min-width: 50px;
+    max-width: 200px;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .ant-table {
+    .ant-table-thead > tr {
+      background: transparent;
+    }
+    .ant-table-thead {
+      > tr > th {
+        .text-ellipsis;
+        padding: 7px 8px;
+        height: 34px;
+        // border-bottom: none;
+        color: #7f8fa4;
+        background: #eff3f6;
+
+        //表格表头不换行
+        white-space: nowrap;
+        text-align: left;
+
+        .ant-table-column-sorter {
+          color: #fff;
+
+          .ant-table-column-sorter-inner {
+            .ant-table-column-sorter-up,
+            .ant-table-column-sorter-down {
+              color: #fff;
+              &.on {
+                color: #00b80b;
+              }
+            }
+          }
+        }
+        &.ant-table-column-has-actions {
+          &.ant-table-column-has-sorters {
+            &:hover {
+              // background: transparent;
+              background-color: #6c748d;
+            }
+          }
+        }
+      }
+      > tr:first-child > th:first-child,
+      > tr:first-child > th:last-child {
+        border-radius: 0;
+      }
+    }
+    .ant-table-tbody {
+      > tr {
+        &.ant-table-expanded-row {
+          background-color: #fff;
+        }
+        // &.row-odd > td {
+        //   background: #fff;
+        // }
+        // &.row-even > td {
+        //   background: #f7f8fa;
+        // }
+        // &.row-select > td {
+        //   background: #b4bdd1;
+        // }
+        // &:hover > td,
+        // &.expand-parent > td {
+        //   background: #e8e8e8
+        // }
+        & > td {
+          .text-ellipsis;
+          // border-bottom: none;
+          padding: 7px 8px;
+          height: 44px;
+          white-space: nowrap;
+          text-align: left;
+
+          &.ant-table-row-expand-icon-cell {
+            width: 50px;
+            text-align: center;
+            justify-content: center; // 解决图标稍偏上的样式
+            align-items: center;
+            display: flex;
+          }
+          > a {
+            color: #0f71e2;
+          }
+          > .ant-table-row-expand-icon {
+            border: 0;
+          }
+        }
+        & > td[colspan] {
+          overflow: visible;
+          padding: 0;
+        }
+        // &:hover > td {
+        //   background-color: #e6f5ff;
+        // }
+      }
+    }
+
+    .ant-table-row-expand-icon {
+      background-color: transparent;
+
+      &.ant-table-row-spaced {
+        display: none !important;
+      }
+    }
+
+    //展开和合并的图标
+    .ant-table-row-collapsed {
+      width: 22px;
+      height: 22px;
+      background-image: url("../images/right.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      &:after {
+        content: "";
+      }
+    }
+    .ant-table-row-expanded {
+      width: 22px;
+      height: 22px;
+      background-image: url("../images/bottom.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      &:after {
+        content: "";
+      }
+    }
+
+    // // 多选图标下边出现白条,修复字号为14px
+    // .ant-table-selection .ant-checkbox-wrapper {
+    //   font-size: 14px;
+    // }
+
+    // 暂无数据样式高度为44px
+    .ant-table-placeholder {
+      line-height: 24px;
+    }
+  }
+
+  // 日期选择样式修改
+  .ant-calendar-picker-container {
+    .date-selected {
+      color: #fff;
+      background-color: #0f71e2;
+    }
+    .date-hover {
+      // color: rgba(0, 0, 0, 0.65);
+      // background-color: #e8e8e8;
+    }
+    .date-selected-hover {
+      color: #fff;
+      background-color: #0f71e2;
+    }
+    .ant-calendar {
+      &-header {
+        div {
+          a:hover {
+            color: #0f71e2;
+          }
+        }
+      }
+      &-date,
+      &-month-panel-month,
+      &-year-panel-year,
+      &-decade-panel-decade {
+        &:hover {
+          .date-hover;
+        }
+      }
+      &-selected-day {
+        .ant-calendar-date {
+          .date-selected;
+          &:hover {
+            .date-selected-hover;
+          }
+        }
+      }
+      &-month-panel-selected-cell {
+        .ant-calendar-month-panel-month {
+          .date-selected;
+          &:hover {
+            .date-selected-hover;
+          }
+        }
+      }
+      &-year-panel-selected-cell {
+        .ant-calendar-year-panel-year {
+          .date-selected;
+          &:hover {
+            .date-selected-hover;
+          }
+        }
+      }
+      &-decade-panel-selected-cell {
+        .ant-calendar-decade-panel-decade {
+          .date-selected;
+          &:hover {
+            .date-selected-hover;
+          }
+        }
+      }
+      &-time-picker {
+        &-select {
+          li:hover {
+            .date-hover;
+          }
+          &-option-selected {
+            .date-selected;
+          }
+        }
+      }
+      &-footer {
+        &-btn {
+          .ant-calendar-ok-btn {
+            text-shadow: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  // 时间选择样式修改
+  .ant-time-picker-panel {
+    .date-selected {
+      color: #fff;
+      background-color: #0f71e2;
+    }
+    .date-hover {
+      // color: rgba(0, 0, 0, 0.65);
+      // background-color: #e8e8e8;
+    }
+    .ant-time-picker-panel {
+      &-select {
+        li:hover {
+          .date-hover;
+        }
+        &-option-selected {
+          .date-selected;
+        }
+      }
+    }
+  }
+
+  .ant-spin {
+    .ant-spin-dot {
+      i {
+        background: #0f71e2;
+      }
+    }
+  }
+  .ant-message {
+    .ant-message-info .anticon {
+      color: #0f71e2;
+    }
+    .ant-message-success .anticon {
+      color: #00b80b;
+    }
+    .ant-message-warning .anticon {
+      color: #fbbd13;
+    }
+    .ant-message-error .anticon {
+      color: #e01211;
+    }
+  }
+  // 表格内有编辑框共用样式
+  .table_form-edit {
+    // border: 1px solid #cfd3da;
+    // :global {
+    .ant-table-row-cell-break-word {
+      .ant-form-item-control {
+        line-height: 28px;
+        height: 28px;
+        overflow: hidden;
+        .ant-select-selection,
+        .ant-select-selection__rendered,
+        .ant-input,
+        .ant-input-number,
+        .ant-input-number-input {
+          height: 28px;
+          line-height: 28px;
+        }
+      }
+      // .has-error .ant-input-number {
+      //   border-color: #e01211 !important;
+      // }
+      .ant-table-thead > tr:first-child > th:first-child,
+      .ant-table-thead > tr:first-child > th:last-child {
+        border-radius: 0;
+      }
+    }
+    // }
+  }
+
+  // cascader 级联选择器
+  .ant-cascader-menus {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
